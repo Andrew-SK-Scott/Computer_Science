@@ -1,3 +1,8 @@
+/*
+Date : 6/23/2024 ( 1 : 35 am )
+problem : #6064 ( baekjoon )
+ - Link : https://www.acmicpc.net/problem/6064
+*/
 #include <iostream>
 
 int process(const int &M, const int &N, const int &x, const int &y)
@@ -34,6 +39,9 @@ int main(void)
     for (int i = 0; i < T; i++) {
         int M, N, x, y;
         std::cin >> M >> N >> x >> y;
+
+        // Q. why I have to swap(M, N) and swap(x, y)?
+        // A. try example_1 - fourth line
         if (M > N) { std::swap(M, N); std::swap(x, y); }
         std::cout << process(M, N, x, y) << '\n';
     }
